@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccn71oklcljx0"]
 
-[ext_resource type="Texture2D" uid="uid://c71h2lmr1tra4" path="res://assets/image/image-mesh-gradient.png" id="1_r838s"]
+[ext_resource type="Texture2D" path="res://assets/image/image-mesh-gradient.png" id="1_r838s"]
 [ext_resource type="Script" path="res://scripts/menus/main.gd" id="1_sdf4p"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p58xq"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bkuxq55g6n47h"]
 
 [ext_resource type="Script" path="res://scripts/menus/start.gd" id="1_oqhxp"]
-[ext_resource type="Texture2D" uid="uid://c71h2lmr1tra4" path="res://assets/image/image-mesh-gradient.png" id="2_vtnpl"]
+[ext_resource type="Texture2D" path="res://assets/image/image-mesh-gradient.png" id="2_vtnpl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cevxs"]
 
