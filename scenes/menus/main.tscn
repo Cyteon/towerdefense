@@ -1,0 +1,112 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccn71oklcljx0"]
+
+[ext_resource type="Texture2D" uid="uid://c71h2lmr1tra4" path="res://assets/image/image-mesh-gradient.png" id="1_r838s"]
+[ext_resource type="Script" path="res://scripts/menus/main.gd" id="1_sdf4p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p58xq"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sdf4p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_r838s")
+expand_mode = 3
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 716.0
+offset_bottom = 132.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 128
+text = "Tower Defense"
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 136.0
+offset_right = 285.0
+offset_bottom = 181.0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 32
+text = "Version: 1.1.1"
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -280.0
+offset_right = 243.0
+offset_bottom = -8.0
+grow_vertical = 0
+theme_override_constants/separation = -16
+alignment = 2
+
+[node name="PlayButton" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 92
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p58xq")
+text = "Play"
+alignment = 0
+
+[node name="CreditsButton" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 92
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p58xq")
+text = "Credits"
+alignment = 0
+
+[node name="ExitButton" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 92
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_p58xq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p58xq")
+text = "Exit"
+alignment = 0
+
+[connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Buttons/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Buttons/ExitButton" to="." method="_on_exit_button_pressed"]
